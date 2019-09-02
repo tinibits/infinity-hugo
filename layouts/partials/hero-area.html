@@ -1,14 +1,20 @@
 {{ if .Site.Params.hero.enable }}
 {{"<!-- Hero Area Section -->" | safeHTML}}
+
 <section class="hero-area" style='background-image: url("{{ with .Site.Params.hero.bg }} {{ . }}{{ end }}");'>
+        <canvas style="position: absolute"></canvas>
+        <script src="js/solar/universo.js"></script>
+        <script src="js/solar/estrela.js"></script>
+        <script src="js/solar/planeta.js"></script>
+        <script src="js/solar/main.js"></script>
     <div class="block">
         {{ with .Site.Params.hero.title }}
-        <h1 class="wow fadeInDown" data-wow-delay="0.3s" data-wow-duration=".2s" style="font-size:72px;">
+        <h1 class="wow fadeInDown" data-wow-delay="0.3s" data-wow-duration=".2s" style="font-size:72px; position: absolute; left: 0; right: 0; text-align: center;">
             {{ . }}
         </h1>
         {{ end }}
         {{ with .Site.Params.hero.subtitle }}
-        <p class="wow fadeInDown" data-wow-delay="0.5s" data-wow-duration=".5s" style="text-align:right;">
+        <p class="wow fadeInDown" data-wow-delay="0.5s" data-wow-duration=".5s" style="text-align:right; position: absolute; left: 0; right: 0; margin-top: 72px; margin-right: 280px">
             {{ . }}
         </p>
         {{ end }}
@@ -20,5 +26,6 @@
              And we believe that is the only way to deliver useful, high-quality, and innovative products for other people.
         </p>
     </div>
+    
 </section>
 {{ end }}
