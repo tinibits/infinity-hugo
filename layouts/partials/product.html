@@ -1,28 +1,32 @@
 {{ if .Site.Params.product.enable }}
-    {{"<!-- Product Section -->" | safeHTML}}
-    <section id="product" class="section about bg-gray">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-7 col-sm-12 wow fadeInLeft">
-                    <div class="content">
-                        <div class="sub-heading">
+{{"<!-- Product Section -->" | safeHTML}}
+<section id="product" class="section about bg-gray">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7 col-sm-12 wow fadeInLeft">
+                <div class="content">
+                    <div class="sub-heading">
                         {{ with .Site.Params.product.heading }}
-                            <h3>{{ . }}</h3>
-                        {{ end }}
-                        </div>
-                        {{ with .Site.Params.product.description }}
-                            <p>{{ . | markdownify }}</p>
+                        <h2>
+                            <a style="color: red; font-size: 48px; font-style: bold;"
+                            
+                                href="https://tinido.com">{{ . }}</a>
+                        </h2>
                         {{ end }}
                     </div>
+                    {{ with .Site.Params.product.description }}
+                    <p style="color: black; font-size: 24px; font-style: normal;" >{{ . | markdownify }}</p>
+                    {{ end }}
                 </div>
-                <div class="col-md-5 col-sm-12 wow fadeInLeft" data-wow-delay="0.3s">
-                    <div class="about-slider">
-                        {{ range .Site.Params.product.sliderItem }}
-                            <img src="{{ .image }}" alt="slider-image">
-                        {{ end }}
-                    </div>
+            </div>
+            <div class="col-md-5 col-sm-12 wow fadeInLeft" data-wow-delay="0.3s">
+                <div class="about-slider">
+                    {{ range .Site.Params.product.sliderItem }}
+                    <img src="{{ .image }}" alt="slider-image">
+                    {{ end }}
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 {{ end }}
