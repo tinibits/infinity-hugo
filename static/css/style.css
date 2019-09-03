@@ -504,7 +504,7 @@ a:active {
   border-radius: 0;
   border: none;
   box-shadow: none;
-  background: #1bafb4;
+  background: #002132;
   padding: 0px 35px;
   color: #fff;
   font-weight: bold;
@@ -523,8 +523,8 @@ a:active {
 
 .btn-send {
   line-height: 48px;
-  border: 2px solid #1bafb4;
-  background: #1bafb4;
+  border: 2px solid #002132;
+  background: #002132;
   color: #fff;
   width: 100%;
   font-size: 14px;
